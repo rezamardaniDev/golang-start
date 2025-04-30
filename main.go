@@ -11,9 +11,14 @@ func main() {
 		fmt.Println("index:", index, "item:", item)
 	}
 
+	userDisplay("reza")
 	sayHello("reza")
 }
 
 func sayHello(name string) {
 	fmt.Printf("Hello %s", name)
+}
+
+func userDisplay(name string){
+	fmt.Printf("name: %s", name)
 }
