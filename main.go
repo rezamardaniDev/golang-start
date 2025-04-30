@@ -15,5 +15,5 @@ func main() {
 }
 
 func sayHello(name string) {
-	fmt.Printf("Hello %s", name)
+	fmt.Printf("hello %s", name)
 }
