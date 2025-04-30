@@ -10,4 +10,10 @@ func main() {
 	for index, item := range lst1 {
 		fmt.Println("index:", index, "item:", item)
 	}
+
+	sayHello("reza")
+}
+
+func sayHello(name string) {
+	fmt.Printf("Hello %s", name)
 }
