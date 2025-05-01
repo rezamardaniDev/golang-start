@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// this struct for view other cart
 type creditCard struct {
 	cardNumber string
 	expireDate string
@@ -20,14 +21,14 @@ func main() {
 		{cardNumber: "5892101234567890", expireDate: "02/05", cvv2: "123", bankName: "meliBank"},
 		{cardNumber: "6273531122334455", expireDate: "03/06", cvv2: "987", bankName: "parsianBank"},
 		{cardNumber: "6037709876543210", expireDate: "04/07", cvv2: "555", bankName: "samanBank"},
+		{cardNumber: "6037991458632145", expireDate: "01/04", cvv2: "478", bankName: "samanBank"},
 	}
 
-	for _,item := range cards{
+	for _, item := range cards {
 		fmt.Println(item.cardNumber)
 	}
-	
 
-	lst1 := []int{1, 2, 3, 4, 5, 6, 7, 8, 10, 14}
+	lst1 := []int{1, 2, 3, 4, 5, 6, 7, 8, 10, 14, 15, 16, 17, 18, 19, 20}
 
 	for index, item := range lst1 {
 		fmt.Println("index:", index, "item:", item)
@@ -41,6 +42,9 @@ func main() {
 
 	userDisplay("reza")
 	sayHello("reza")
+
+	isValid := cardChecker(cards[0])
+	fmt.Println("Is the card valid?", isValid)
 }
 
 func sayHello(name string) {
@@ -49,4 +53,12 @@ func sayHello(name string) {
 
 func userDisplay(name string) {
 	fmt.Printf("name: %s", name)
+}
+
+func cardChecker(card creditCard) bool {
+	if len(card.cardNumber) != 16 || len(card.expireDate) != 5 || len(card.cvv2) != 3 {
+		return false
+	} else {
+		return true
+	}
 }
