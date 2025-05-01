@@ -12,6 +12,8 @@ type creditCard struct {
 }
 
 func main() {
+	message := sayNo("reza")
+	fmt.Println(message)
 
 	cards := []creditCard{
 		{cardNumber: "6037991458632145", expireDate: "01/04", cvv2: "478", bankName: "bluBank"},
