@@ -11,6 +11,12 @@ func main() {
 		fmt.Println("index:", index, "item:", item)
 	}
 
+	i := 0
+	for i < 20 {
+		fmt.Println("this is:", i)
+		i++
+	}
+
 	userDisplay("reza")
 	sayHello("reza")
 }
@@ -19,6 +25,6 @@ func sayHello(name string) {
 	fmt.Printf("Hello %s", name)
 }
 
-func userDisplay(name string){
+func userDisplay(name string) {
 	fmt.Printf("name: %s", name)
 }
